@@ -48,3 +48,9 @@ and then run startup seeds `adonis seed`.
 ### Run
 Script for Deployment
 `npm run dev`
+
+### ER-Diagram
+`ER-Diagram.png`
+
+### Document API
+Import Postman Collection to Postman from `Adonis API.postman_collection.json` file.

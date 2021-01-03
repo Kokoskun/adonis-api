@@ -1,0 +1,1304 @@
+{
+	"info": {
+		"_postman_id": "ed864683-8c39-49f6-8125-75f75629c91f",
+		"name": "Adonis API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API",
+			"item": [
+				{
+					"name": "V1",
+					"item": [
+						{
+							"name": "Users",
+							"item": [
+								{
+									"name": "Create User",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{JWT}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"email\": \"kokoskun@gmail.com\",\n    \"password\": \"123456\",\n    \"name\": \"Patipan Nakarin\",\n    \"phone\": \"0846776920\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/v1/user",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user"
+											]
+										},
+										"description": "api/v1/user\r\n<table>\r\n  <caption><b><center>Headers</center></b></caption>\r\n  <hr>\r\n\t<tr>\r\n\t\t<th>Property</th>\r\n\t\t<th>Type</th>\r\n\t\t<th>Required</th>\r\n\t\t<th>Description</th>\r\n\t</tr>\r\n    <tr>\r\n\t\t<td>Content-Type</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>application/json</td>\r\n\t</tr>\r\n    <tr>\r\n\t\t<td>Authorization</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>Bearer {{JWT}}</td>\r\n\t</tr>\r\n</table>\r\n<table>\r\n  <caption><b><center>Body</center></b></caption>\r\n  <hr>\r\n\t<tr>\r\n\t\t<th>Property</th>\r\n\t\t<th>Type</th>\r\n\t\t<th>Required</th>\r\n\t\t<th>Description</th>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td>email</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>Email/Value</td>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td>password</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>Password/Value</td>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td>name</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>Name/Value</td>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td>phone</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Optional</td>\r\n\t\t<td>Phone/Value</td>\r\n\t</tr>\r\n</table>"
+									},
+									"response": [
+										{
+											"name": "200 Succeed",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"type": "text",
+														"value": "Bearer {{JWT}}"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n\t\"email\": \"kokoskun@gmail.com\",\n    \"password\": \"123456\",\n    \"name\": \"Patipan Nakarin\",\n    \"phone\": \"0846776920\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{URL}}/api/v1/user",
+													"host": [
+														"{{URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"user"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "36"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 03 Jan 2021 19:41:55 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"result\": \"success\",\n    \"json\": {\n        \"id\": 2\n    }\n}"
+										},
+										{
+											"name": "406 Not Acceptable",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"type": "text",
+														"value": "Bearer {{JWT}}"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n\t\"email\": \"kokoskun@gmail.com\",\n    \"password\": \"123456\",\n    \"name\": \"Patipan Nakarin\",\n    \"phone\": \"0846776920\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{URL}}/api/v1/user",
+													"host": [
+														"{{URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"user"
+													]
+												}
+											},
+											"status": "Not Acceptable",
+											"code": 406,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "54"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 03 Jan 2021 19:43:45 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"result\": \"error\",\n    \"message\": \"Email is already in use\"\n}"
+										},
+										{
+											"name": "401 Unauthorized",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"type": "text",
+														"value": "Bearer {{JWT}}",
+														"disabled": true
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n\t\"email\": \"kokoskun@gmail.com\",\n    \"password\": \"123456\",\n    \"name\": \"Patipan Nakarin\",\n    \"phone\": \"0846776920\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{URL}}/api/v1/user",
+													"host": [
+														"{{URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"user"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "50"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 03 Jan 2021 20:49:22 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"result\": \"unauthorized\",\n    \"message\": \"Unauthorized\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Update User By ID",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"type": "text",
+												"value": "Bearer {{JWT}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"password\": \"123456\",\n    \"phone\": \"0846776920\",\n    \"name\": \"Patipan\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/v1/user/{{id}}",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"{{id}}"
+											]
+										},
+										"description": "api/v1/user/{{id}}\r\n<table>\r\n\t<tr>\r\n\t\t<th>Property</th>\r\n\t\t<th>Type</th>\r\n\t\t<th>Required</th>\r\n\t\t<th>Description</th>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td>id</td>\r\n\t\t<td>Integer</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>ID/Value</td>\r\n\t</tr>\r\n</table>\r\n<table>\r\n  <caption><b><center>Headers</center></b></caption>\r\n  <hr>\r\n\t<tr>\r\n\t\t<th>Property</th>\r\n\t\t<th>Type</th>\r\n\t\t<th>Required</th>\r\n\t\t<th>Description</th>\r\n\t</tr>\r\n    <tr>\r\n\t\t<td>Content-Type</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>application/json</td>\r\n\t</tr>\r\n    <tr>\r\n\t\t<td>Authorization</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>Bearer {{JWT}}</td>\r\n\t</tr>\r\n</table>\r\n<table>\r\n  <caption><b><center>Body</center></b></caption>\r\n  <hr>\r\n\t<tr>\r\n\t\t<th>Property</th>\r\n\t\t<th>Type</th>\r\n\t\t<th>Required</th>\r\n\t\t<th>Description</th>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td>password</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Optional</td>\r\n\t\t<td>Password/Value</td>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td>name</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Optional</td>\r\n\t\t<td>Name/Value</td>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td>phone</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Optional</td>\r\n\t\t<td>Phone/Value</td>\r\n\t</tr>\r\n</table>"
+									},
+									"response": [
+										{
+											"name": "200 Succeed",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Authorization",
+														"type": "text",
+														"value": "Bearer {{JWT}}"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"password\": \"123456\",\n    \"name\": \"Patipan\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{URL}}/api/v1/user/{{id}}",
+													"host": [
+														"{{URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"user",
+														"{{id}}"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "103"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 03 Jan 2021 19:51:01 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"result\": \"success\",\n    \"json\": {\n        \"id\": 2,\n        \"email\": \"kokoskun@gmail.com\",\n        \"name\": \"Patipan\",\n        \"phone\": \"0846776920\"\n    }\n}"
+										},
+										{
+											"name": "404 Not Found",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Authorization",
+														"type": "text",
+														"value": "Bearer {{JWT}}"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"password\": \"123456\",\n    \"phone\": \"0846776920\",\n    \"name\": \"Patipan\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{URL}}/api/v1/user/4",
+													"host": [
+														"{{URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"user",
+														"4"
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "45"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 03 Jan 2021 20:36:00 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"result\": \"error\",\n    \"message\": \"User not found\"\n}"
+										},
+										{
+											"name": "400 Bad Request",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Authorization",
+														"type": "text",
+														"value": "Bearer {{JWT}}"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"password\": \"123456\",\n    \"phone\": \"084677\",\n    \"name\": \"Patipan\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{URL}}/api/v1/user/{{id}}",
+													"host": [
+														"{{URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"user",
+														"{{id}}"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "85"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 03 Jan 2021 20:34:50 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"result\": \"error\",\n    \"message\": \"Invalid Phone (084677), Must be at least 10 characters\"\n}"
+										},
+										{
+											"name": "401 Unauthorized",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Authorization",
+														"type": "text",
+														"value": "Bearer {{JWT}}",
+														"disabled": true
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"password\": \"123456\",\n    \"phone\": \"0846776920\",\n    \"name\": \"Patipan\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{URL}}/api/v1/user/{{id}}",
+													"host": [
+														"{{URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"user",
+														"{{id}}"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "50"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 03 Jan 2021 20:50:06 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"result\": \"unauthorized\",\n    \"message\": \"Unauthorized\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Get Users",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{JWT}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{URL}}/api/v1/user",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user"
+											],
+											"query": [
+												{
+													"key": "email",
+													"value": "kokoskun",
+													"description": "Email/Value",
+													"disabled": true
+												},
+												{
+													"key": "phone",
+													"value": "0846776920",
+													"description": "Phone/Value",
+													"disabled": true
+												},
+												{
+													"key": "name",
+													"value": "Patipan",
+													"description": "Name/Value",
+													"disabled": true
+												}
+											]
+										},
+										"description": "api/v1/user\r\n<table>\r\n  <caption><b><center>Headers</center></b></caption>\r\n  <hr>\r\n\t<tr>\r\n\t\t<th>Property</th>\r\n\t\t<th>Type</th>\r\n\t\t<th>Required</th>\r\n\t\t<th>Description</th>\r\n\t</tr>\r\n    <tr>\r\n\t\t<td>Content-Type</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>application/json</td>\r\n\t</tr>\r\n    <tr>\r\n\t\t<td>Authorization</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>Bearer {{JWT}}</td>\r\n\t</tr>\r\n</table>\r\n<table>\r\n  <caption><b><center>Params</center></b></caption>\r\n  <hr>\r\n\t<tr>\r\n\t\t<th>Property</th>\r\n\t\t<th>Type</th>\r\n\t\t<th>Required</th>\r\n\t\t<th>Description</th>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td>email</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Optional</td>\r\n\t\t<td>Email/Value</td>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td>phone</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Optional</td>\r\n\t\t<td>Phone/Value</td>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td>name</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Optional</td>\r\n\t\t<td>Name/Value</td>\r\n\t</tr>\r\n</table>"
+									},
+									"response": [
+										{
+											"name": "401 Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer {{JWT}}",
+														"type": "text",
+														"disabled": true
+													}
+												],
+												"url": {
+													"raw": "{{URL}}/api/v1/user?email=kokoskun",
+													"host": [
+														"{{URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"user"
+													],
+													"query": [
+														{
+															"key": "email",
+															"value": "kokoskun",
+															"description": "Email/Value"
+														},
+														{
+															"key": "first_name",
+															"value": "P",
+															"description": "First Name/Value",
+															"disabled": true
+														},
+														{
+															"key": "last_name",
+															"value": null,
+															"description": "Last Name/Value",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "100"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "87"
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 18 Dec 2020 09:27:14 GMT"
+												},
+												{
+													"key": "X-RateLimit-Reset",
+													"value": "1608283662"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "http://localhost:8081"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "43"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"2b-nivPG206NFfDpm7JnpLyTO1resU\""
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"result\": \"error\",\n    \"message\": \"Unauthorized\"\n}"
+										},
+										{
+											"name": "200 Succeed",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer {{JWT}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{URL}}/api/v1/user?email=kokoskun",
+													"host": [
+														"{{URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"user"
+													],
+													"query": [
+														{
+															"key": "email",
+															"value": "kokoskun",
+															"description": "Email/Value"
+														},
+														{
+															"key": "first_name",
+															"value": "P",
+															"description": "First Name/Value",
+															"disabled": true
+														},
+														{
+															"key": "last_name",
+															"value": null,
+															"description": "Last Name/Value",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "X-Powered-By",
+													"value": "Express"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "100"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "95"
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 18 Dec 2020 09:23:28 GMT"
+												},
+												{
+													"key": "X-RateLimit-Reset",
+													"value": "1608283662"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "http://localhost:8081"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "222"
+												},
+												{
+													"key": "ETag",
+													"value": "W/\"de-to4SG5AJAllUE89oTaiNeLpgXVc\""
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"result\": \"success\",\n    \"json\": {\n        \"count\": 2,\n        \"data\": [\n            {\n                \"id\": 52,\n                \"email\": \"kokoskun@gmail.com\",\n                \"first_name\": \"Patipan\",\n                \"last_name\": \"Nakarin\"\n            },\n            {\n                \"id\": 57,\n                \"email\": \"kokoskun.apple@gmail.com\",\n                \"first_name\": \"PatipaN\",\n                \"last_name\": \"NakariN\"\n            }\n        ]\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "Get User By ID",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{JWT}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{URL}}/api/v1/user/{{id}}",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"{{id}}"
+											]
+										},
+										"description": "api/v1/user/{{id}}\r\n<table>\r\n\t<tr>\r\n\t\t<th>Property</th>\r\n\t\t<th>Type</th>\r\n\t\t<th>Required</th>\r\n\t\t<th>Description</th>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td>id</td>\r\n\t\t<td>Integer</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>ID/Value</td>\r\n\t</tr>\r\n</table>\r\n<table>\r\n  <caption><b><center>Headers</center></b></caption>\r\n  <hr>\r\n\t<tr>\r\n\t\t<th>Property</th>\r\n\t\t<th>Type</th>\r\n\t\t<th>Required</th>\r\n\t\t<th>Description</th>\r\n\t</tr>\r\n    <tr>\r\n\t\t<td>Content-Type</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>application/json</td>\r\n\t</tr>\r\n    <tr>\r\n\t\t<td>Authorization</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>Bearer {{JWT}}</td>\r\n\t</tr>\r\n</table>"
+									},
+									"response": [
+										{
+											"name": "401 Unauthorized",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer {{JWT}}",
+														"type": "text",
+														"disabled": true
+													}
+												],
+												"url": {
+													"raw": "{{URL}}/api/v1/user/{{id}}",
+													"host": [
+														"{{URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"user",
+														"{{id}}"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "50"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 03 Jan 2021 20:50:46 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"result\": \"unauthorized\",\n    \"message\": \"Unauthorized\"\n}"
+										},
+										{
+											"name": "200 Succeed",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer {{JWT}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{URL}}/api/v1/user/{{id}}",
+													"host": [
+														"{{URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"user",
+														"{{id}}"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "103"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 03 Jan 2021 20:38:10 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"result\": \"success\",\n    \"json\": {\n        \"id\": 2,\n        \"email\": \"kokoskun@gmail.com\",\n        \"name\": \"Patipan\",\n        \"phone\": \"0846776920\"\n    }\n}"
+										},
+										{
+											"name": "404 Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer {{JWT}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{URL}}/api/v1/user/55",
+													"host": [
+														"{{URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"user",
+														"55"
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "45"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 03 Jan 2021 20:39:03 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"result\": \"error\",\n    \"message\": \"User not found\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete User By ID",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{JWT}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{URL}}/api/v1/user/{{id}}",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"user",
+												"{{id}}"
+											]
+										},
+										"description": "api/v1/user/{{id}}\r\n<table>\r\n\t<tr>\r\n\t\t<th>Property</th>\r\n\t\t<th>Type</th>\r\n\t\t<th>Required</th>\r\n\t\t<th>Description</th>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td>id</td>\r\n\t\t<td>Integer</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>ID/Value</td>\r\n\t</tr>\r\n</table>\r\n<table>\r\n  <caption><b><center>Headers</center></b></caption>\r\n  <hr>\r\n\t<tr>\r\n\t\t<th>Property</th>\r\n\t\t<th>Type</th>\r\n\t\t<th>Required</th>\r\n\t\t<th>Description</th>\r\n\t</tr>\r\n    <tr>\r\n\t\t<td>Content-Type</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>application/json</td>\r\n\t</tr>\r\n    <tr>\r\n\t\t<td>Authorization</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>Bearer {{JWT}}</td>\r\n\t</tr>\r\n</table>"
+									},
+									"response": [
+										{
+											"name": "404 Not Found",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer {{JWT}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{URL}}/api/v1/user/{{id}}",
+													"host": [
+														"{{URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"user",
+														"{{id}}"
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "45"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 03 Jan 2021 20:45:03 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"result\": \"error\",\n    \"message\": \"User not found\"\n}"
+										},
+										{
+											"name": "401 Unauthorized",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer {{JWT}}",
+														"type": "text",
+														"disabled": true
+													}
+												],
+												"url": {
+													"raw": "{{URL}}/api/v1/user/{{id}}",
+													"host": [
+														"{{URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"user",
+														"{{id}}"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "50"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 03 Jan 2021 20:51:06 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"result\": \"unauthorized\",\n    \"message\": \"Unauthorized\"\n}"
+										},
+										{
+											"name": "200 Succeed",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer {{JWT}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{URL}}/api/v1/user/{{id}}",
+													"host": [
+														"{{URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"user",
+														"{{id}}"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "20"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 03 Jan 2021 20:44:29 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"result\": \"success\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Token",
+							"item": [
+								{
+									"name": "Token",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Basic ZDEzZDJhOGU4ZGI3NGQzOWIwMTc5ZmJiYTAzZWQ2MGM6MmI5MTkwNWYzNDdkMDc3NjczMDdlNDkxOTUwZmIxYjkyOTA3ZjllODBhMGZiZTQ3YjdiNTMwZWUzNmUzZGE0Zg",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"grant_type\": \"client_credentials\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/v1/auth/token",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"auth",
+												"token"
+											]
+										},
+										"description": "api/v1/auth/token\r\n<table>\r\n  <caption><b><center>Headers</center></b></caption>\r\n  <hr>\r\n\t<tr>\r\n\t\t<th>Property</th>\r\n\t\t<th>Type</th>\r\n\t\t<th>Required</th>\r\n\t\t<th>Description</th>\r\n\t</tr>\r\n    <tr>\r\n\t\t<td>Content-Type</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>application/json</td>\r\n\t</tr>\r\n<tr>\r\n\t\t<td>Authorization</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>Basic {{Base64(CLIENT_ID:CLIENT_SECRET)}}</td>\r\n\t</tr>\r\n</table>\r\n<table>\r\n  <caption><b><center>Body</center></b></caption>\r\n  <hr>\r\n\t<tr>\r\n\t\t<th>Property</th>\r\n\t\t<th>Type</th>\r\n\t\t<th>Required</th>\r\n\t\t<th>Description</th>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td>grant_type</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>client_credentials</td>\r\n\t</tr>\r\n</table>"
+									},
+									"response": [
+										{
+											"name": "403 Forbidden",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Basic ZDEzZDJhOGUZGI3NGQzOWIwMTc5ZmJiYTAzZWQ2MGM6MmI5MTkwNWYzNDdkMDc3NjczMDdlNDkxOTUwZmIxYjkyOTA3ZjllODBhMGZiZTQ3YjdiNTMwZWUzNmUzZGE0Zg",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"grant_type\": \"client_credentials\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{URL}}/api/v1/auth/token",
+													"host": [
+														"{{URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"auth",
+														"token"
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "44"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 03 Jan 2021 20:57:23 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"result\": \"error\",\n    \"message\": \"Access Denied\"\n}"
+										},
+										{
+											"name": "200 Succeed",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Basic ZDEzZDJhOGU4ZGI3NGQzOWIwMTc5ZmJiYTAzZWQ2MGM6MmI5MTkwNWYzNDdkMDc3NjczMDdlNDkxOTUwZmIxYjkyOTA3ZjllODBhMGZiZTQ3YjdiNTMwZWUzNmUzZGE0Zg",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"grant_type\": \"client_credentials\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{URL}}/api/v1/auth/token",
+													"host": [
+														"{{URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"auth",
+														"token"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "227"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 03 Jan 2021 20:56:21 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"result\": \"success\",\n    \"json\": {\n        \"token_type\": \"Bearer\",\n        \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDk3MDczODEuODI3LCJleHAiOjE2MDk3OTM3ODEuODI3fQ.2GJehBSgKQAvshLKksd9YkJJZMpGqcFkIQCf3WV9maQ\",\n        \"expires_in\": 86400\n    }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Country",
+							"item": [
+								{
+									"name": "Get Currencies",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{URL}}/api/v1/country/{{code}}/currencies",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"country",
+												"{{code}}",
+												"currencies"
+											]
+										},
+										"description": "api/v1/country/{{code}}/currencies\r\n<table>\r\n\t<tr>\r\n\t\t<th>Property</th>\r\n\t\t<th>Type</th>\r\n\t\t<th>Required</th>\r\n\t\t<th>Description</th>\r\n\t</tr>\r\n\t<tr>\r\n\t\t<td>code</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>Code of Country/Value</td>\r\n\t</tr>\r\n</table>\r\n<table>\r\n  <caption><b><center>Headers</center></b></caption>\r\n  <hr>\r\n\t<tr>\r\n\t\t<th>Property</th>\r\n\t\t<th>Type</th>\r\n\t\t<th>Required</th>\r\n\t\t<th>Description</th>\r\n\t</tr>\r\n    <tr>\r\n\t\t<td>Content-Type</td>\r\n\t\t<td>String</td>\r\n\t\t<td>Required</td>\r\n\t\t<td>application/json</td>\r\n\t</tr>\r\n</table>"
+									},
+									"response": [
+										{
+											"name": "200 Succeed",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{URL}}/api/v1/country/{{code}}/currencies",
+													"host": [
+														"{{URL}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"country",
+														"{{code}}",
+														"currencies"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Content-Length",
+													"value": "510"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 03 Jan 2021 21:03:06 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"result\": \"success\",\n    \"data\": [\n        {\n            \"value\": 100,\n            \"unit\": \"100 Dollar\",\n            \"currency_unit\": \"USD\"\n        },\n        {\n            \"value\": 50,\n            \"unit\": \"50 Dollar\",\n            \"currency_unit\": \"USD\"\n        },\n        {\n            \"value\": 20,\n            \"unit\": \"20 Dollar\",\n            \"currency_unit\": \"USD\"\n        },\n        {\n            \"value\": 5,\n            \"unit\": \"5 Dollar\",\n            \"currency_unit\": \"USD\"\n        },\n        {\n            \"value\": 1,\n            \"unit\": \"1 Dollar\",\n            \"currency_unit\": \"USD\"\n        },\n        {\n            \"value\": 0.25,\n            \"unit\": \"25 Cent\",\n            \"currency_unit\": \"USD\"\n        },\n        {\n            \"value\": 0.1,\n            \"unit\": \"10 Cent\",\n            \"currency_unit\": \"USD\"\n        },\n        {\n            \"value\": 0.05,\n            \"unit\": \"5 Cent\",\n            \"currency_unit\": \"USD\"\n        },\n        {\n            \"value\": 0.01,\n            \"unit\": \"1 Cent\",\n            \"currency_unit\": \"USD\"\n        }\n    ]\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

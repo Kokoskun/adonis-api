@@ -3,14 +3,14 @@ const Env = use('Env')
 const JWT = require("jsonwebtoken")
 const Logger = use('Logger')
 class Token {
-	handle ({ request, response }, next) {
+	async handle ({ request, response }, next) {
 		try {
 			const authorization = request.header('authorization')
 			if (authorization) {
 				const access = authorization.split(" ");
 				const token = access[1];
 				if (token && access[0] === "Bearer") {
-					JWT.verify(token, Env.get('JWT_KEY'), async function(err, data) {
+					await JWT.verify(token, Env.get('JWT_KEY'), async function(err, data) {
 						if (err) {
 							if (err.name === "TokenExpiredError") {
 								return response.forbidden({result:'unauthorized',message:'Token expired'})

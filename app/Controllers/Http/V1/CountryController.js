@@ -5,7 +5,7 @@ class CountryController {
 		async currencies ({ request, response, params}) {
 		try {
 			const code = params.code.toString().toUpperCase()
-			const currencies = await Country.query().where('countries.code', code).innerJoin('currencies', 'countries.id', 'currencies.country_id').where('currencies.active', true).select('currencies.value','currencies.unit','countries.currency_unit').orderBy('currencies.id', 'desc').fetch()
+			const currencies = await Country.query().where('countries.code', code).innerJoin('currencies', 'countries.id', 'currencies.country_id').where('currencies.active', true).select('currencies.value','currencies.unit','countries.currency_unit').orderBy('currencies.value', 'desc').fetch()
 			return response.ok({result: 'success',data:currencies})
 		} catch (error) {
 			const { code, message } = error

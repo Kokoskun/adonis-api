@@ -1,5 +1,6 @@
 'use strict'
 const Hash = use('Hash')
+const Validate = use('App/Utils/Validate')
 const regexp = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const UserHook = exports = module.exports = {}
 UserHook.validate = (user) => {
@@ -14,14 +15,11 @@ UserHook.validate = (user) => {
 		throw new Error('Password is required')
 	}
 }
-UserHook.hashPhone = (user) => {
+UserHook.hashPhone = async (user) => {
 	if(user.phone){
-		const phone = user.phone.toString().replace(/[^0-9]/g,'')
-		const phoneLength = phone.length
-		if(phoneLength > 9 && phoneLength < 15){
+		const phone = await Validate.hashPhone(user.phone)
+		if(phone){
 			user.phone = phone
-		}else{
-			throw new Error('Invalid Phone ('+phone+'), Must be at least 10 characters')
 		}
 	}
 }
@@ -36,13 +34,10 @@ UserHook.hashEmail = (user) => {
 	}
 }
 UserHook.hashPassword = async (user) => {
-	const password = user.password
-	if(password){
-		const passwordLength = password.toString().length
-		if(passwordLength < 6 || passwordLength > 100){
-			throw new Error('Password must be at least 6 characters and max 100 characters')
-		}else{
-			user.password = await Hash.make(user.password)
+	if(user.password){
+		const password = await Validate.hashPassword(user.password)
+		if(password){
+			user.password = await Hash.make(password)
 		}
 	}
 }

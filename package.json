@@ -17,7 +17,7 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@adonisjs/ace": "^5.0.8",
+    "@adonisjs/ace": "^8.0.0",
     "@adonisjs/auth": "^3.0.7",
     "@adonisjs/bodyparser": "^2.0.9",
     "@adonisjs/cors": "^1.0.7",
@@ -30,7 +30,9 @@
     "pg": "^8.5.1",
     "winston": "^3.3.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@adonisjs/application": "^3.0.21"
+  },
   "autoload": {
     "App": "./app"
   }

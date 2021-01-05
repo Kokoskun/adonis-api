@@ -54,3 +54,7 @@ Script for Deployment
 
 ### Document API
 Import Postman Collection to Postman from `Adonis API.postman_collection.json` file.
+
+## Setup Docker (Dev)
+Build: `docker build -t adonis-api .`
+Run: `docker run -it -p 8000:8000 adonis-api`
